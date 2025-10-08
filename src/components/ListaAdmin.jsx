@@ -54,33 +54,8 @@ function ListaProductosAdmin() {
   };
 
   const eliminarProducto = (index) => {
-  const producto = productos[index];
-
-  Swal.fire({
-    title: "¿Eliminar producto?",
-    text: `¿Estás seguro de eliminar "${producto.nombre}" del inventario?`,
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#d33", // rojo
-    cancelButtonColor: "#6c757d", // gris bootstrap
-    confirmButtonText: "Sí, eliminar",
-    cancelButtonText: "Cancelar",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      const nuevos = productos.filter((_, i) => i !== index);
-      setProductos(nuevos);
-
-      Swal.fire({
-        title: "Eliminado",
-        text: `"${producto.nombre}" fue eliminado correctamente.`,
-        icon: "success",
-        confirmButtonColor: "#198754", // verde bootstrap
-        timer: 2000,
-        timerProgressBar: true,
-      });
-    }
-  });
-};
+    setProductos((prev) => prev.filter((_, i) => i !== index));
+  };
 
   const verMas = (p) => {
     alert(
