@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Footer() {
   return (
-    <footer className="footer mt-auto py-4">
+    <Footer className="footer mt-auto py-4">
       <Container>
         <Row className="gy-3 text-center text-md-start">
           {/* Columna 1: Marca */}
@@ -52,7 +52,7 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-    </footer>
+    </Footer>
   );
 }
 
