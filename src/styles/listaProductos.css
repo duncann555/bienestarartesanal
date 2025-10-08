@@ -1,0 +1,16 @@
+.productos-container {
+  max-width: 1200px; /* evita que se estire demasiado */
+  margin: 0 auto; /* centra horizontalmente */
+}
+
+.card {
+  margin: 0 auto; /* centra cada card individualmente */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
