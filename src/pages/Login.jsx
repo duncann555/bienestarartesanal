@@ -1,0 +1,65 @@
+import { Modal, Button, Form } from "react-bootstrap";
+import "../styles/login.css";
+
+function Login({ show, handleClose, handleShowRegister }) {
+  return (
+    <Modal show={show} onHide={handleClose} centered>
+      <Modal.Header closeButton>
+        <Modal.Title className="fw-bold text-primary">Iniciar Sesión</Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control type="email" placeholder="Ej: juanperez@mail.com" />
+            <Form.Text className="text-muted">
+              Nunca compartiremos tu correo con nadie.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Contraseña:</Form.Label>
+            <Form.Control type="password" placeholder="Ingresa una contraseña" />
+          </Form.Group>
+
+          <Button variant="primary" type="submit" className="w-100 fw-semibold">
+            Ingresar
+          </Button>
+        </Form>
+
+        <div className="text-center my-3 text-muted">o continuar con</div>
+
+        <div className="d-flex justify-content-center gap-3 mb-3">
+          <Button variant="light" className="btn-social-facebook d-flex align-items-center gap-2 px-3">
+            <i className="bi bi-facebook fs-4 text-primary"></i>
+            <span>Facebook</span>
+          </Button>
+
+          <Button variant="light" className="btn-social-instagram d-flex align-items-center gap-2 px-3">
+            <i className="bi bi-instagram fs-4 text-danger"></i>
+            <span>Instagram</span>
+          </Button>
+        </div>
+
+        <div className="text-center">
+          <p className="text-muted mb-0">
+            ¿No tenés cuenta?{" "}
+            <a
+              href="#"
+              className="text-primary fw-semibold text-decoration-none"
+              onClick={(e) => {
+                e.preventDefault();
+                handleShowRegister();
+              }}
+            >
+              Registrate
+            </a>
+          </p>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+}
+
+export default Login;

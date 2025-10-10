@@ -1,13 +1,10 @@
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "../styles/Footer.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "../../styles/footer.css";
 
 function Footer() {
   return (
     <footer className="footer mt-auto py-4">
-      <Container>
         <Row className="gy-3 text-center text-md-start">
           {/* Columna 1: Marca */}
           <Col md={4}>
@@ -51,7 +48,6 @@ function Footer() {
             © {new Date().getFullYear()} Bienestar Artesanal · Todos los derechos reservados
           </Col>
         </Row>
-      </Container>
     </footer>
   );
 }

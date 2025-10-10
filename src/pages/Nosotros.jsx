@@ -8,6 +8,15 @@ const SobreNosotros = () => {
       {/* 🌿 Sección principal */}
       <section className="bg-light py-5 border-bottom">
         <Container>
+          <h1 className="text-center text-success fw-bold mb-4">
+            Sobre Nosotros
+          </h1>
+          <p className="text-center text-muted mb-5">
+            En Bienestar Artesanal, nos dedicamos a crear productos naturales
+            que nutren tu cuerpo y alma.  
+            Nuestra pasión es ofrecerte lo mejor de la naturaleza, elaborado con
+            amor y cuidado artesanal.
+          </p>
           <Row className="align-items-center">
             <Col md={6} className="mb-4 mb-md-0">
               <img
