@@ -14,12 +14,13 @@ import Error404 from "./pages/Error404.jsx";
 import RutaProtegida from "./pages/RutaProtegida.jsx";
 
 function App() {
-  const sesionUsuario = JSON.parse(sessionStorage.getItem('usuarioKey')) || false
+  const sesionUsuario =
+    JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
   const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
 
-  useEffect(()=> {
-    sessionStorage.setItem('usuarioKey', JSON.stringify(usuarioLogueado))
-  },[usuarioLogueado])
+  useEffect(() => {
+    sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
+  }, [usuarioLogueado]);
 
   return (
     <>
@@ -32,14 +33,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/productos" element={<Productos />} />
+
             <Route
-              path="/admin"
-              element={
-                <RutaProtegida usuarioLogueado={usuarioLogueado}>
-                  <Admin />
-                </RutaProtegida>
-              }
-            />
+              element={<RutaProtegida usuarioLogueado={usuarioLogueado} />}
+            >
+              <Route path="/admin" element={<Admin />} />
+            </Route>
+
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="*" element={<Error404 />} />

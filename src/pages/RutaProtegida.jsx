@@ -1,17 +1,13 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { Navigate, Outlet } from "react-router";
 
-function RutaProtegida({ usuarioLogueado, children }) {
-  const navigate = useNavigate();
+function RutaProtegida({ usuarioLogueado}) {
 
-  useEffect(() => {
     if (!usuarioLogueado) {
-      navigate("/"); // 👈 redirige al inicio
+      
+      return <Navigate to={"/"} />
     }
-  }, [usuarioLogueado, navigate]);
 
-  // si está logueado, renderiza el contenido (Admin)
-  return usuarioLogueado ? children : null;
+  return <Outlet />
 }
 
 export default RutaProtegida;
