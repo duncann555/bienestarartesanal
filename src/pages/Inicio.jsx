@@ -18,7 +18,7 @@ const Inicio = () => {
           <Row className="align-items-center">
             <Col md={6}>
               <img
-                src="/src/assets/13.png"
+                src={imgProductos}
                 alt="Productos naturales"
                 className="img-fluid rounded shadow-sm"
               />
