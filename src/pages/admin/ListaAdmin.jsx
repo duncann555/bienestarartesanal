@@ -8,23 +8,17 @@ import {
   Modal,
   Form,
 } from "react-bootstrap";
-import Swal from "sweetalert2";
-
 
 function ListaProductosAdmin() {
-  const [productos, setProductos] = useState([
-    { nombre: "Gotas Cola de Caballo", precio: 2500, cantidad: 12 },
-    { nombre: "Gotas Digestivas", precio: 2200, cantidad: 8 },
-    { nombre: "Gotas Nerviol", precio: 2700, cantidad: 15 },
-    { nombre: "Gotas Moringa", precio: 2400, cantidad: 10 },
-  ]);
+  const [productos, setProductos] = useState([]);
 
   const [showModal, setShowModal] = useState(false);
   const [productoEdit, setProductoEdit] = useState(null);
   const [indexEdit, setIndexEdit] = useState(null);
 
   const handleClose = () => setShowModal(false);
-  const handleShow = (producto, index) => {
+  
+  const handleShow = (producto = { nombre: "", precio: "", cantidad: "" }, index = null) => {
     setProductoEdit({ ...producto });
     setIndexEdit(index);
     setShowModal(true);
@@ -68,7 +62,7 @@ function ListaProductosAdmin() {
       <h3 className="text-center text-success mb-4">Productos cargados</h3>
 
       <ListGroup className="p-3 border rounded shadow-sm bg-light">
-        {/* Header visible solo en pantallas medianas o grandes */}
+        
         <ListGroup.Item className="fw-semibold bg-success text-white d-none d-md-flex text-center">
           <Col md={4}>Producto</Col>
           <Col md={2}>Precio</Col>
@@ -99,7 +93,11 @@ function ListaProductosAdmin() {
                 </span>
               </Col>
 
-              <Col xs={12} md={4} className="d-flex justify-content-center gap-2 mt-2 mt-md-0">
+              <Col
+                xs={12}
+                md={4}
+                className="d-flex justify-content-center gap-2 mt-2 mt-md-0"
+              >
                 <Button
                   variant="warning"
                   size="sm"
@@ -107,7 +105,11 @@ function ListaProductosAdmin() {
                 >
                   ✏️ Editar
                 </Button>
-                <Button variant="primary" size="sm" onClick={() => verMas(prod)}>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => verMas(prod)}
+                >
                   👁️ Ver más
                 </Button>
                 <Button

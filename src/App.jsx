@@ -3,7 +3,7 @@ import Footer from "./pages/shared/Footer.jsx";
 import Container from "react-bootstrap/Container";
 
 import { BrowserRouter, Routes, Route } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Inicio from "./pages/Inicio.jsx";
 import Productos from "./pages/Productos.jsx";
@@ -14,7 +14,12 @@ import Error404 from "./pages/Error404.jsx";
 import RutaProtegida from "./pages/RutaProtegida.jsx";
 
 function App() {
-  const [usuarioLogueado, setUsuarioLogueado] = useState(false);
+  const sesionUsuario = JSON.parse(sessionStorage.getItem('usuarioKey')) || false
+  const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
+
+  useEffect(()=> {
+    sessionStorage.setItem('usuarioKey', JSON.stringify(usuarioLogueado))
+  },[usuarioLogueado])
 
   return (
     <>

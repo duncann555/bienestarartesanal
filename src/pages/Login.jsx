@@ -10,7 +10,8 @@ function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado}) {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const navegacion = useNavigate();
+
+  const redirigir = useNavigate();
 
   const onSubmit = (data) => {
     if (
@@ -19,7 +20,8 @@ function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado}) {
     ) {
       setUsuarioLogueado(true);
       handleClose();
-      navegacion("/admin");
+
+      redirigir("/admin");
 
 
       Swal.fire({
