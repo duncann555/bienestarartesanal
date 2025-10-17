@@ -20,7 +20,7 @@ const Contacto = () => {
       {/* 🌿 Encabezado */}
       <section className="bg-success text-white text-center py-5">
         <Container>
-          <h1 className="fw-bold mb-3">Contacto</h1>
+          <h1 className="fw-bold mb-3 ">Contacto</h1>
           <p className="lead mb-0">
             Estamos acá para ayudarte. Escribinos tus dudas o consultas sobre nuestros productos naturales 💚
           </p>

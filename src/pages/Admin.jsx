@@ -1,5 +1,5 @@
-import FormularioAdministrador from "../components/FormularioAdmin";
-import ListaAdmin from "../components/ListaAdmin";
+import FormularioAdministrador from "./admin/FormularioAdmin";
+import ListaAdmin from "./admin/ListaAdmin";
 
 const Admnistrador = () => {
   return (

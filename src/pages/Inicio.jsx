@@ -59,12 +59,12 @@ const Inicio = () => {
               {
                 nombre: "Gotas Digestivas",
                 precio: 2200,
-                imagen: "/src/assets/gota2.png",
+                imagen: "/src/assets/gota1.png",
               },
               {
                 nombre: "Gotas Nerviol",
                 precio: 2700,
-                imagen: "/src/assets/gota3.png",
+                imagen: "/src/assets/gota1.png",
               },
             ].map((prod, i) => (
               <Col key={i} xs={12} sm={6} md={4}>

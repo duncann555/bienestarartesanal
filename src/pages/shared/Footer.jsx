@@ -1,19 +1,27 @@
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "../styles/footer.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import Container from "react-bootstrap/Container";
+import "../../styles/footer.css";
+import logo from "../../assets/2.png";
 
 function Footer() {
   return (
-    <Footer className="footer mt-auto py-4">
+    <footer className="footer mt-auto py-4">
       <Container>
         <Row className="gy-3 text-center text-md-start">
           {/* Columna 1: Marca */}
           <Col md={4}>
-            <h5 className="footer-brand">Bienestar Artesanal</h5>
-            <p className="small">
-              Productos naturales y fitoterapéuticos elaborados con dedicación y respeto por la tradición herbal.
+            <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+              <img
+                src={logo}
+                alt="Logo Bienestar Artesanal"
+                className="footer-logo me-2"
+              />
+              <h5 className="footer-brand mb-0">Bienestar Artesanal</h5>
+            </div>
+            <p className="small text-muted text-center text-md-start">
+              Productos naturales y fitoterapéuticos elaborados con dedicación y
+              respeto por la tradición herbal.
             </p>
           </Col>
 
@@ -48,11 +56,11 @@ function Footer() {
 
         <Row>
           <Col className="text-center small text-muted">
-            © {new Date().getFullYear()} Bienestar Artesanal · Todos los derechos reservados
+            © 2025 Bienestar Artesanal · Todos los derechos reservados
           </Col>
         </Row>
       </Container>
-    </Footer>
+    </footer>
   );
 }
 

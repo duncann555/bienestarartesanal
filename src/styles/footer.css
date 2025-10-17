@@ -3,6 +3,13 @@
   color: var(--color-texto);
   font-family: 'Nunito', sans-serif;
   border-top: 1px solid var(--color-borde);
+    width: 100%;
+
+}
+
+.footer .container {
+  max-width: 1200px; /* igual que el resto de tus secciones */
+  margin: 0 auto;
 }
 
 .footer h6,
@@ -22,4 +29,19 @@
 
 .footer .social-link i {
   font-size: 1.5rem;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;              /* redondo */
+  border: 2px solid var(--color-secundario);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--color-secundario);
 }
