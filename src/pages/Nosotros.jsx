@@ -1,6 +1,9 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../styles/nosotros.css";
+import { Link } from "react-router";
 
+import imgNosotros from "../assets/12.png";
+import imgDestilador from "../assets/555.webp";
 
 const SobreNosotros = () => {
   return (
@@ -13,35 +16,32 @@ const SobreNosotros = () => {
           </h1>
           <p className="text-center text-muted mb-5">
             En Bienestar Artesanal, nos dedicamos a crear productos naturales
-            que nutren tu cuerpo y alma.  
-            Nuestra pasión es ofrecerte lo mejor de la naturaleza, elaborado con
-            amor y cuidado artesanal.
+            que nutren tu cuerpo y alma. Nuestra pasión es ofrecerte lo mejor de
+            la naturaleza, elaborado con amor y cuidado artesanal.
           </p>
           <Row className="align-items-center">
             <Col md={6} className="mb-4 mb-md-0">
               <img
-                src="/src/assets/12.png"
+                src={imgNosotros}
                 alt="Equipo Bienestar Artesanal"
                 className="img-fluid rounded shadow-sm"
               />
             </Col>
 
             <Col md={6}>
-              <h2 className="text-success fw-bold mb-3">
-                Nuestra Esencia 🌿
-              </h2>
+              <h2 className="text-success fw-bold mb-3">Nuestra Esencia 🌿</h2>
               <p className="text-muted">
-                En <strong>Bienestar Artesanal</strong> creemos en el poder de la
-                naturaleza para equilibrar cuerpo, mente y espíritu.  
+                En <strong>Bienestar Artesanal</strong> creemos en el poder de
+                la naturaleza para equilibrar cuerpo, mente y espíritu.
                 Elaboramos productos naturales con ingredientes puros, libres de
                 conservantes y químicos agresivos, inspirados en recetas
                 tradicionales de herbolaria y medicina natural.
               </p>
               <p className="text-muted">
                 Nuestra misión es ofrecer alternativas saludables, sostenibles y
-                accesibles para el bienestar diario.  
-                Cada producto es creado artesanalmente con pasión, respeto y
-                compromiso hacia vos y hacia el planeta. 🌎
+                accesibles para el bienestar diario. Cada producto es creado
+                artesanalmente con pasión, respeto y compromiso hacia vos y
+                hacia el planeta. 🌎
               </p>
             </Col>
           </Row>
@@ -71,7 +71,9 @@ const SobreNosotros = () => {
             <Col xs={12} md={4}>
               <Card className="border-0 shadow-sm h-100">
                 <Card.Body>
-                  <h5 className="text-success fw-bold mb-3">💧 Transparencia</h5>
+                  <h5 className="text-success fw-bold mb-3">
+                    💧 Transparencia
+                  </h5>
                   <p className="text-muted">
                     Queremos que sepas exactamente qué estás usando. Sin
                     aditivos ocultos, sin promesas falsas: solo bienestar real.
@@ -83,7 +85,9 @@ const SobreNosotros = () => {
             <Col xs={12} md={4}>
               <Card className="border-0 shadow-sm h-100">
                 <Card.Body>
-                  <h5 className="text-success fw-bold mb-3">🌎 Sustentabilidad</h5>
+                  <h5 className="text-success fw-bold mb-3">
+                    🌎 Sustentabilidad
+                  </h5>
                   <p className="text-muted">
                     Cuidamos el planeta usando envases reciclables y promoviendo
                     un consumo consciente que respete la naturaleza.
@@ -100,12 +104,14 @@ const SobreNosotros = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={6}>
-              <h2 className="text-success fw-bold mb-3">Elaboración Artesanal</h2>
+              <h2 className="text-success fw-bold mb-3">
+                Elaboración Artesanal
+              </h2>
               <p className="text-muted">
                 Todos nuestros productos son elaborados a mano, en pequeños
-                lotes, garantizando frescura y calidad.  
-                Nos inspiramos en el equilibrio entre tradición y ciencia para
-                desarrollar fórmulas efectivas, seguras y naturales.
+                lotes, garantizando frescura y calidad. Nos inspiramos en el
+                equilibrio entre tradición y ciencia para desarrollar fórmulas
+                efectivas, seguras y naturales.
               </p>
               <p className="text-muted">
                 Cada frasco que llega a tus manos pasa por un proceso cuidadoso
@@ -115,7 +121,7 @@ const SobreNosotros = () => {
             </Col>
             <Col md={6}>
               <img
-                src="/src/assets/555.webp"
+                src={imgDestilador}
                 alt="Proceso artesanal"
                 className="img-fluid rounded shadow-sm"
               />
@@ -130,13 +136,12 @@ const SobreNosotros = () => {
           <h3 className="text-success fw-bold mb-3">¿Querés saber más?</h3>
           <p className="text-muted mb-4">
             Escribinos para conocer más sobre nuestros productos, procesos o
-            puntos de venta.  
-            ¡Estamos felices de acompañarte en tu camino hacia una vida más
-            natural!
+            puntos de venta. ¡Estamos felices de acompañarte en tu camino hacia
+            una vida más natural!
           </p>
-          <a href="/contacto" className="btn btn-success btn-lg">
+          <Link to="/contacto" className="btn btn-success btn-lg">
             Contactanos 💌
-          </a>
+          </Link>
         </Container>
       </section>
     </>
