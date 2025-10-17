@@ -1,6 +1,9 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import Carrusel from "../components/Carrusel";
 
+import imgProductos from "../assets/13.png";
+import gota1 from "../assets/gota1.png";
+
 const Inicio = () => {
   return (
     <>
@@ -26,9 +29,9 @@ const Inicio = () => {
               </h2>
               <p className="text-muted">
                 Nuestros productos son elaborados artesanalmente a base de
-                ingredientes naturales seleccionados. 🌿  
-                Creemos en la fitoterapia, en la energía de las plantas y su
-                poder para sanar y equilibrar cuerpo y mente.
+                ingredientes naturales seleccionados. 🌿 Creemos en la
+                fitoterapia, en la energía de las plantas y su poder para sanar
+                y equilibrar cuerpo y mente.
               </p>
               <p className="text-muted">
                 Libre de químicos agresivos, conservantes y procesos
@@ -54,17 +57,17 @@ const Inicio = () => {
               {
                 nombre: "Gotas Cola de Caballo",
                 precio: 2500,
-                imagen: "/src/assets/gota1.png",
+                imagen: gota1,
               },
               {
                 nombre: "Gotas Digestivas",
                 precio: 2200,
-                imagen: "/src/assets/gota1.png",
+                imagen: gota1,
               },
               {
                 nombre: "Gotas Nerviol",
                 precio: 2700,
-                imagen: "/src/assets/gota1.png",
+                imagen: gota1,
               },
             ].map((prod, i) => (
               <Col key={i} xs={12} sm={6} md={4}>
@@ -102,6 +105,7 @@ const Inicio = () => {
       </section>
 
       {/* 💥 OFERTAS ESPECIALES */}
+      {/* 💥 OFERTAS ESPECIALES */}
       <section className="bg-success bg-opacity-10 py-5 border-top">
         <Container>
           <h3 className="text-center text-success fw-bold mb-4">
@@ -109,7 +113,18 @@ const Inicio = () => {
           </h3>
           <Row className="g-4">
             <Col xs={12} sm={6} md={4}>
-              <Card className="shadow border-0">
+              <Card className="shadow border-0 h-100">
+                {/* 🖼️ Imagen arriba */}
+                <Card.Img
+                  variant="top"
+                  src={gota1}
+                  alt="Pack Detox"
+                  style={{
+                    height: "220px",
+                    objectFit: "contain",
+                    padding: "1rem",
+                  }}
+                />
                 <Card.Body className="text-center">
                   <h5 className="fw-bold text-success">Pack Detox</h5>
                   <p className="text-muted">
@@ -120,8 +135,19 @@ const Inicio = () => {
                 </Card.Body>
               </Card>
             </Col>
+
             <Col xs={12} sm={6} md={4}>
-              <Card className="shadow border-0">
+              <Card className="shadow border-0 h-100">
+                <Card.Img
+                  variant="top"
+                  src={gota1}
+                  alt="Pack Relax"
+                  style={{
+                    height: "220px",
+                    objectFit: "contain",
+                    padding: "1rem",
+                  }}
+                />
                 <Card.Body className="text-center">
                   <h5 className="fw-bold text-success">Pack Relax</h5>
                   <p className="text-muted">
@@ -132,8 +158,19 @@ const Inicio = () => {
                 </Card.Body>
               </Card>
             </Col>
+
             <Col xs={12} sm={6} md={4}>
-              <Card className="shadow border-0">
+              <Card className="shadow border-0 h-100">
+                <Card.Img
+                  variant="top"
+                  src={gota1}
+                  alt="Combo Vitalidad"
+                  style={{
+                    height: "220px",
+                    objectFit: "contain",
+                    padding: "1rem",
+                  }}
+                />
                 <Card.Body className="text-center">
                   <h5 className="fw-bold text-success">Combo Vitalidad</h5>
                   <p className="text-muted">

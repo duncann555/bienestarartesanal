@@ -1,7 +1,7 @@
 import { Modal, Button, Form } from "react-bootstrap";
 import "../styles/login.css";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
 function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado}) {

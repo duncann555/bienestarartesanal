@@ -2,7 +2,7 @@ import Menu from "./pages/shared/Menu.jsx";
 import Footer from "./pages/shared/Footer.jsx";
 import Container from "react-bootstrap/Container";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import { useState } from "react";
 
 import Inicio from "./pages/Inicio.jsx";

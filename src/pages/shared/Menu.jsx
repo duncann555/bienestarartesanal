@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router";
 import logo from "../../assets/2.png";
 import "../../styles/menu.css";
 import Login from "../Login";
