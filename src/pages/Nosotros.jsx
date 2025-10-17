@@ -20,7 +20,7 @@ const SobreNosotros = () => {
           <Row className="align-items-center">
             <Col md={6} className="mb-4 mb-md-0">
               <img
-                src="/src/assets/natural-team.jpg"
+                src="/src/assets/12.png"
                 alt="Equipo Bienestar Artesanal"
                 className="img-fluid rounded shadow-sm"
               />
@@ -115,7 +115,7 @@ const SobreNosotros = () => {
             </Col>
             <Col md={6}>
               <img
-                src="/src/assets/artesanal-proceso.jpg"
+                src="/src/assets/555.webp"
                 alt="Proceso artesanal"
                 className="img-fluid rounded shadow-sm"
               />

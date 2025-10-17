@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
-import { NavLink, Link } from "react-router";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/2.png";
 import "../../styles/menu.css";
 import Login from "../Login";
 import Register from "../Registro";
 
-function Menu() {
+function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -57,21 +57,31 @@ function Menu() {
               Contacto
             </NavLink>
 
-            {/* Botón de login */}
-            <Button
-              variant="outline-light"
-              className="d-flex align-items-center gap-1"
-              onClick={handleShowLogin}
-            >
-              <i className="bi bi-person-circle fs-5"></i>
-              <span className="d-none d-sm-inline">Login</span>
-            </Button>
-
-            <NavLink to="/admin">
-              <Button variant="warning" className="btn-shop fw-semibold">
-                Administrador
+            {usuarioLogueado ? (
+              <>
+                <NavLink to="/admin">
+                  <Button variant="warning" className="fw-semibold me-2">
+                    Administrador
+                  </Button>
+                </NavLink>
+                <Button
+                  variant="outline-light"
+                  onClick={() => setUsuarioLogueado(false)}
+                >
+                  Cerrar sesión
+                </Button>
+              </>
+            ) : (
+              <Button
+                variant="warning"
+                onClick={handleShowLogin}
+                className="d-flex align-items-center gap-2 fw-semibold btn-primary"
+                aria-label="Iniciar sesión"
+              >
+                <i className="bi bi-person-circle fs-5" />
+                <span className="d-none d-sm-inline">Iniciar sesión</span>
               </Button>
-            </NavLink>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -81,6 +91,7 @@ function Menu() {
         show={showLogin}
         handleClose={handleCloseAll}
         handleShowRegister={handleShowRegister}
+        setUsuarioLogueado={setUsuarioLogueado}
       />
       <Register
         show={showRegister}
