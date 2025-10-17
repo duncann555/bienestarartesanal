@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -29,10 +30,26 @@ function Footer() {
           <Col md={4}>
             <h6 className="fw-bold mb-3">Enlaces</h6>
             <ul className="list-unstyled footer-links">
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#productos">Productos</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="#sobre">Sobre Nosotros</a></li>
+              <li>
+                <Link to="/" className="text-decoration-none">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/productos" className="text-decoration-none">
+                  Productos
+                </Link>
+              </li>
+              <li>
+                <Link to="/contacto" className="text-decoration-none">
+                  Contacto
+                </Link>
+              </li>
+              <li>
+                <Link to="/nosotros" className="text-decoration-none">
+                  Sobre Nosotros
+                </Link>
+              </li>
             </ul>
           </Col>
 
