@@ -4,25 +4,24 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
-function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado}) {
+function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const redirigir = useNavigate();
+  const navegacion = useNavigate();
 
   const onSubmit = (data) => {
+    console.log(data);
+
     if (
       data.email === import.meta.env.VITE_API_EMAIL &&
       data.password === import.meta.env.VITE_API_PASSWORD
     ) {
+      console.log("aqui logueo al usuario");
       setUsuarioLogueado(true);
-      handleClose();
-
-      redirigir("/admin");
-
 
       Swal.fire({
         title: "Bienvenido Administrador",
@@ -30,6 +29,9 @@ function Login({ show, handleClose, handleShowRegister, setUsuarioLogueado}) {
         icon: "success",
       });
 
+      handleClose();
+
+      navegacion("/admin");
     } else {
       Swal.fire({
         title: "Ocurrio un error",
